@@ -96,5 +96,38 @@ namespace MagicCony
             Frm_SysTool frm = new Frm_SysTool();
             frm.ShowDialog();
         }
+
+        private void Frm_Main_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal) ;
+            //    notifyIcon1.Visible = false;
+            else if(this.WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                this.Hide();
+            }
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void menuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon1_DoubleClick(null, null);
+        }
+
+        private void menuItemExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确定退出吗？", "退出",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+                Application.ExitThread();
+        }
     }
 }

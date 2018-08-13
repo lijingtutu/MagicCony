@@ -9,7 +9,7 @@ using DevComponents.DotNetBar;
 
 namespace MagicCony
 {
-    public partial class Frm_SysTool : DevComponents.DotNetBar.OfficeForm
+    public partial class Frm_SysTool : Form
     {
         public Frm_SysTool()
         {

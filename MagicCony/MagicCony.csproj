@@ -32,8 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.31, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +70,8 @@
     <Compile Include="Frm_SysTool.Designer.cs">
       <DependentUpon>Frm_SysTool.cs</DependentUpon>
     </Compile>
+    <Compile Include="myHook.cs" />
+    <Compile Include="Operator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Win32.cs" />
@@ -189,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\系统优化背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="search.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
